@@ -16,6 +16,12 @@ class Time:
     def format_time(self):
         """Return time object (t) as a formatted string"""
         return f'{self.hour:02d}:{self.minute:02d}:{self.second:02d}'
+    def __str__(self):
+        """Return a nicely formatted string for print()"""
+        return f'{self.hour:02d}:{self.minute:02d}:{self.second:02d}'
+    def __repr__(self):
+        """Return a string for the interactive shell display"""
+        return f'{self.hour:02d}.{self.minute:02d}.{self.second:02d}'
  
     def sum_times(self, t2):
         """Add two time objests and return the sum."""
